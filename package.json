@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@geoman-io/maplibre-geoman-free": "0.2.17",
+    "@geoman-io/maplibre-geoman-free": "0.2.27",
     "@maplibre/maplibre-gl-geocoder": "1.7.1",
     "h3-js": "4.1.0",
     "maplibre-gl": "5.1.0",
@@ -17,8 +17,8 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@types/react": "19.0.2",
-    "@types/react-dom": "19.0.2",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
     "@vitejs/plugin-react": "4.3.4",
     "vite": "6.0.11",
     "vite-plugin-checker": "0.8.0"
