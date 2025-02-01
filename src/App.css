@@ -1,0 +1,95 @@
+#root {
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+#map {
+  flex: 1 1 auto;
+}
+
+.maplibregl-ctrl-geocoder--suggestion-icon,
+.maplibregl-ctrl-geocoder--result-icon {
+  display: none;
+}
+
+.sidebar {
+  flex: 0 0 auto;
+  width: 25rem;
+  padding: 0.5rem;
+  background-color: #f8f8f8;
+  border-left: 1px solid #cdcdcd;
+  overflow-y: auto;
+}
+
+.sidebar .sidebar-options {
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: #f5d3e4;
+  font-family: monospace;
+}
+
+.sidebar .feature {
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: #d8ecff;
+  font-family: monospace;
+}
+
+.sidebar .feature .feature-id {
+  border: none;
+  background-color: inherit;
+  font-family: monospace;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebar .feature .feature-id:hover {
+  text-decoration: underline;
+}
+
+.sidebar .feature .temp-add,
+.sidebar .feature .temp-drop {
+  border: none;
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  background-color: #b7dbff;
+}
+
+.sidebar .feature .temp-add:hover {
+  background-color: #9dffad;
+}
+
+.sidebar .feature .temp-drop:hover {
+  background-color: #ffa3a3;
+}
+
+.sidebar .feature .content-header {
+  width: 100%;
+  border: none;
+  text-align: left;
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  background-color: #ffeac9;
+}
+
+.sidebar .feature .content-header:hover {
+  font-weight: bold;
+}
+
+.sidebar .feature .content {
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  background-color: #fbf5e2;
+}
