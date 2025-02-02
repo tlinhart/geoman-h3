@@ -42,7 +42,7 @@ const GmMap = ({ handleEvent }: GmMapProps) => {
             geocoder.setProximity({ longitude, latitude });
           },
           (error) => {
-            console.error(`Failed to get user location: ${error}`);
+            console.error("Failed to get user location:", error);
           }
         );
       } else {

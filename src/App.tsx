@@ -17,7 +17,7 @@ const App = () => {
   const [h3Resolution, setH3Resolution] = useState<number>(8);
 
   const handleEvent = useCallback((event: Event) => {
-    console.debug("Event", event);
+    console.debug("Event:", event);
 
     switch (event.type) {
       case "gm:loaded":

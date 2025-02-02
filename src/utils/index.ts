@@ -82,7 +82,7 @@ export const nominatimGeocoderApi: MaplibreGeocoderApi = {
         });
       }
     } catch (error) {
-      console.error(`Geocoding failed: ${error}`);
+      console.error("Geocoding failed:", error);
     }
     return { type: "FeatureCollection", features };
   },
@@ -223,7 +223,7 @@ export const flatZoneGeocoderApi: MaplibreGeocoderApi = {
         });
       }
     } catch (error) {
-      console.error(`Geocoding failed: ${error}`);
+      console.error("Geocoding failed:", error);
     }
     return { type: "FeatureCollection", features };
   },
