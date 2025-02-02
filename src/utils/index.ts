@@ -8,10 +8,7 @@ export const getGeometryBounds = (
   const coordinates =
     geometry.type === "Polygon"
       ? geometry.coordinates[0]
-      : geometry.coordinates.reduce((coordinates, polygon) => {
-          coordinates.push(...polygon[0]);
-          return coordinates;
-        }, [] as number[][]);
+      : geometry.coordinates.flat(2);
   const minLng = coordinates.reduce((min, current) =>
     min[0] <= current[0] ? min : current
   )[0];
