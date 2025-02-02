@@ -49,7 +49,10 @@ export const stringifyGeometry = (geometry: FeatureGeometry): string =>
     2
   ).replace(/"\[(\d+(?:\.\d+)?),(\d+(?:\.\d+)?)\]"/g, "[ $1, $2 ]");
 
-export const stringifyH3Cells = (h3Cells: string[], format: H3Format): string =>
+export const stringifyH3Cells = (
+  h3Cells: string[],
+  format: H3Format
+): string =>
   format === "string"
     ? JSON.stringify(h3Cells, null, 2)
     : JSON.stringify(
