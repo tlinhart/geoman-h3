@@ -3,14 +3,14 @@
   "main": "index.ts",
   "devDependencies": {
     "@types/mime-types": "2.1.4",
-    "@types/node": "22.10.7",
+    "@types/node": "22.13.0",
     "typescript": "5.7.3"
   },
   "dependencies": {
-    "@pulumi/aws": "6.55.0",
+    "@pulumi/aws": "6.67.0",
     "@pulumi/command": "1.0.1",
-    "@pulumi/pulumi": "3.136.1",
+    "@pulumi/pulumi": "3.148.0",
     "mime-types": "2.1.35",
-    "pulumi-aws-tags": "1.1.2"
+    "pulumi-aws-tags": "1.1.3"
   }
 }
