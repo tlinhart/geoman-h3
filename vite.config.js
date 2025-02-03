@@ -3,6 +3,10 @@ import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
 
 export default defineConfig({
+  define: {
+    __APP_NAME__: JSON.stringify(process.env.npm_package_name),
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+  },
   plugins: [
     react(),
     checker({
