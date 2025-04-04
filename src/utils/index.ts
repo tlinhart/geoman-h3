@@ -1,5 +1,5 @@
 import type { MaplibreGeocoderApi } from "@maplibre/maplibre-gl-geocoder";
-import { polygonToCells } from "h3-js";
+import { POLYGON_TO_CELLS_FLAGS, polygonToCellsExperimental } from "h3-js";
 import type { FeatureGeometry, GeometryBounds, H3Format } from "../types";
 
 export const getGeometryBounds = (
@@ -29,9 +29,21 @@ export const geometryToH3Cells = (
   resolution: number
 ): string[] =>
   geometry.type === "Polygon"
-    ? polygonToCells(geometry.coordinates, resolution, true)
+    ? polygonToCellsExperimental(
+        geometry.coordinates,
+        resolution,
+        POLYGON_TO_CELLS_FLAGS.containmentOverlapping,
+        true
+      )
     : geometry.coordinates.reduce((h3Cells, polygon) => {
-        h3Cells.push(...polygonToCells(polygon, resolution, true));
+        h3Cells.push(
+          ...polygonToCellsExperimental(
+            polygon,
+            resolution,
+            POLYGON_TO_CELLS_FLAGS.containmentOverlapping,
+            true
+          )
+        );
         return h3Cells;
       }, [] as string[]);
 
