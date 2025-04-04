@@ -10,7 +10,7 @@
     "@pulumi/aws": "6.75.0",
     "@pulumi/command": "1.0.2",
     "@pulumi/pulumi": "3.160.0",
-    "mime-types": "2.1.35",
+    "mime-types": "3.0.1",
     "pulumi-aws-tags": "1.1.5"
   }
 }
