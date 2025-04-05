@@ -32,19 +32,17 @@ new aws.s3.BucketPolicy(
   "geoman-h3-demo-bucket-policy",
   {
     bucket: bucket.id,
-    policy: bucket.id.apply((bucket) =>
-      JSON.stringify({
-        Version: "2012-10-17",
-        Statement: [
-          {
-            Effect: "Allow",
-            Principal: "*",
-            Action: "s3:GetObject",
-            Resource: `arn:aws:s3:::${bucket}/*`,
-          },
-        ],
-      })
-    ),
+    policy: pulumi.jsonStringify({
+      Version: "2012-10-17",
+      Statement: [
+        {
+          Effect: "Allow",
+          Principal: "*",
+          Action: "s3:GetObject",
+          Resource: pulumi.interpolate`${bucket.arn}/*`,
+        },
+      ],
+    }),
   },
   { dependsOn: [bucketPublicAccessBlock] }
 );
