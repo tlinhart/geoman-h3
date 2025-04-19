@@ -14,15 +14,15 @@
     "@geoman-io/maplibre-geoman-free": "0.3.0",
     "@maplibre/maplibre-gl-geocoder": "1.8.0",
     "h3-js": "4.2.1",
-    "maplibre-gl": "5.3.0",
+    "maplibre-gl": "5.3.1",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@types/react": "19.1.0",
-    "@types/react-dom": "19.1.1",
-    "@vitejs/plugin-react": "4.3.4",
-    "vite": "6.2.6",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "@vitejs/plugin-react": "4.4.1",
+    "vite": "6.3.2",
     "vite-plugin-checker": "0.9.1"
   },
   "peerDependencies": {
