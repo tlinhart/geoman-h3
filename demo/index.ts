@@ -12,7 +12,7 @@ registerAutoTags({
 });
 
 // Create an S3 bucket.
-const bucket = new aws.s3.BucketV2("geoman-h3-demo-bucket", {
+const bucket = new aws.s3.Bucket("geoman-h3-demo-bucket", {
   bucket: "geoman-h3-demo.linhart.tech",
   forceDestroy: true,
 });
@@ -47,7 +47,7 @@ new aws.s3.BucketPolicy(
   { dependsOn: [bucketPublicAccessBlock] }
 );
 
-const bucketWebsite = new aws.s3.BucketWebsiteConfigurationV2(
+const bucketWebsite = new aws.s3.BucketWebsiteConfiguration(
   "geoman-h3-demo-bucket-website",
   {
     bucket: bucket.id,
@@ -91,7 +91,7 @@ buildCommand.assets.apply(
       pulumi.output(fileAsset.path).apply((filePath) => {
         const relPath = path.relative("../dist", filePath);
         const mimeType = mime.lookup(filePath);
-        new aws.s3.BucketObjectv2(`geoman-h3-demo-bucket-object-${relPath}`, {
+        new aws.s3.BucketObject(`geoman-h3-demo-bucket-object-${relPath}`, {
           key: relPath,
           bucket: bucket.id,
           source: asset,
