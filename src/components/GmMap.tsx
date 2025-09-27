@@ -129,7 +129,7 @@ const GmMap = ({ handleEvent }: GmMapProps) => {
     };
   }, [handleEvent]);
 
-  return <div id="map" ref={mapElement} />;
+  return <div className="map" ref={mapElement} />;
 };
 
 export default GmMap;

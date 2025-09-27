@@ -69,7 +69,7 @@ const Sidebar = ({
             onChange={(event) =>
               handleEvent({
                 type: "sb:h3resolution",
-                resolution: Number.parseInt(event.target.value),
+                resolution: Number.parseInt(event.target.value, 10),
               })
             }
           />
