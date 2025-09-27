@@ -8,7 +8,7 @@
   width: 100vw;
 }
 
-#map {
+.map {
   flex: 1 1 auto;
 }
 

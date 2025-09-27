@@ -88,16 +88,19 @@ buildCommand.assets.apply(
     assets &&
     Object.values(assets).map((asset) => {
       const fileAsset = asset as pulumi.asset.FileAsset;
-      pulumi.output(fileAsset.path).apply((filePath) => {
+      return pulumi.output(fileAsset.path).apply((filePath) => {
         const relPath = path.relative("../dist", filePath);
         const mimeType = mime.lookup(filePath);
-        new aws.s3.BucketObject(`geoman-h3-demo-bucket-object-${relPath}`, {
-          key: relPath,
-          bucket: bucket.id,
-          source: asset,
-          cacheControl: relPath === "index.html" ? "max-age=0" : undefined,
-          contentType: mimeType || undefined,
-        });
+        return new aws.s3.BucketObject(
+          `geoman-h3-demo-bucket-object-${relPath}`,
+          {
+            key: relPath,
+            bucket: bucket.id,
+            source: asset,
+            cacheControl: relPath === "index.html" ? "max-age=0" : undefined,
+            contentType: mimeType || undefined,
+          }
+        );
       });
     })
 );
