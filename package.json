@@ -14,13 +14,13 @@
     "@geoman-io/maplibre-geoman-free": "0.4.9",
     "@maplibre/maplibre-gl-geocoder": "1.9.1",
     "h3-js": "4.3.0",
-    "maplibre-gl": "5.8.0",
+    "maplibre-gl": "5.9.0",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
   "devDependencies": {
-    "@types/react": "19.2.0",
-    "@types/react-dom": "19.2.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
     "@vitejs/plugin-react": "5.0.4",
     "vite": "7.1.9",
     "vite-plugin-checker": "0.11.0"
