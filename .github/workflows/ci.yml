@@ -12,7 +12,7 @@ jobs:
     name: Build application
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Set up Node
         uses: actions/setup-node@v6
         with:
@@ -30,7 +30,7 @@ jobs:
     if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Set up Node
         uses: actions/setup-node@v6
         with:
