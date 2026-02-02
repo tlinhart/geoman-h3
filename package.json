@@ -11,15 +11,15 @@
     "biome": "biome check --write"
   },
   "dependencies": {
-    "@geoman-io/maplibre-geoman-free": "0.6.1",
+    "@geoman-io/maplibre-geoman-free": "0.6.2",
     "@maplibre/maplibre-gl-geocoder": "1.9.4",
     "h3-js": "4.4.0",
-    "maplibre-gl": "5.16.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "maplibre-gl": "5.17.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@types/react": "19.2.9",
+    "@types/react": "19.2.10",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.2",
     "vite": "7.3.1",
