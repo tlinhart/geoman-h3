@@ -11,7 +11,7 @@
     "biome": "biome check --write"
   },
   "dependencies": {
-    "@geoman-io/maplibre-geoman-free": "0.7.0",
+    "@geoman-io/maplibre-geoman-free": "0.7.1",
     "@maplibre/maplibre-gl-geocoder": "1.9.4",
     "h3-js": "4.4.0",
     "maplibre-gl": "5.19.0",
