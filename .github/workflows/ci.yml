@@ -12,9 +12,9 @@ jobs:
     name: Build application
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.3
       - name: Set up Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -30,9 +30,9 @@ jobs:
     if: github.ref_name == 'main'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.3
       - name: Set up Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.4.0
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -42,12 +42,12 @@ jobs:
         run: npm ci
         working-directory: demo
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v6
+        uses: aws-actions/configure-aws-credentials@v6.2.0
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
           aws-region: eu-central-1
       - name: Create or update stack resources
-        uses: pulumi/actions@v6
+        uses: pulumi/actions@v6.6.1
         with:
           pulumi-version: "latest"
           command: up
